@@ -50,7 +50,7 @@ resource "azurerm_network_interface" "Test" {
 
 # Ubuntu Virtual Machine
 resource "azurerm_linux_virtual_machine" "Test" {
-  name                = "Test-vm"
+  name                = var.vm_name
   resource_group_name = azurerm_resource_group.Test.name
   location            = azurerm_resource_group.Test.location
   size                = "Standard_B1s"
